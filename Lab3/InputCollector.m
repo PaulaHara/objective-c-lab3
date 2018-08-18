@@ -16,7 +16,7 @@
     NSLog(@"%@", promptString);
     fgets(input, 255, stdin);
     
-    return [NSString stringWithUTF8String:input];
+    return [[[NSString stringWithUTF8String:input] lowercaseString] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 }
 
 @end
