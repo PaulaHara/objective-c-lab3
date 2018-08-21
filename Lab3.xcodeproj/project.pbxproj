@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA17F1C72127B08C00B4B92B /* ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA17F1C62127B08C00B4B92B /* ContactList.m */; };
+		DA300752212BA0EE00268345 /* PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA300751212BA0EE00268345 /* PhoneNumber.m */; };
 		DA368DCF21266F5800916643 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA368DCE21266F5800916643 /* main.m */; };
 		DA368DD72126719E00916643 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = DA368DD62126719E00916643 /* InputCollector.m */; };
 		DA368DDA212678B800916643 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DA368DD9212678B800916643 /* Contact.m */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		DA17F1C52127B08C00B4B92B /* ContactList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactList.h; sourceTree = "<group>"; };
 		DA17F1C62127B08C00B4B92B /* ContactList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactList.m; sourceTree = "<group>"; };
+		DA300750212BA0EE00268345 /* PhoneNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNumber.h; sourceTree = "<group>"; };
+		DA300751212BA0EE00268345 /* PhoneNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneNumber.m; sourceTree = "<group>"; };
 		DA368DCB21266F5800916643 /* Lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab3; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA368DCE21266F5800916643 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA368DD52126719E00916643 /* InputCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 				DA368DD9212678B800916643 /* Contact.m */,
 				DA17F1C52127B08C00B4B92B /* ContactList.h */,
 				DA17F1C62127B08C00B4B92B /* ContactList.m */,
+				DA300750212BA0EE00268345 /* PhoneNumber.h */,
+				DA300751212BA0EE00268345 /* PhoneNumber.m */,
 			);
 			path = Lab3;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				DA368DD72126719E00916643 /* InputCollector.m in Sources */,
 				DA368DDA212678B800916643 /* Contact.m in Sources */,
 				DA368DCF21266F5800916643 /* main.m in Sources */,
+				DA300752212BA0EE00268345 /* PhoneNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

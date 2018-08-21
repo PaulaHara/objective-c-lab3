@@ -16,8 +16,13 @@
     if(self){
         self.name = aName;
         self.email = aEmail;
+        self.numbers = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void)addNumber:(PhoneNumber *)phoneNumber{
+    [self.numbers addObject:phoneNumber];
 }
 
 @end

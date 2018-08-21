@@ -10,6 +10,15 @@
 
 @interface InputCollector : NSObject
 
+//@property NSArray *history;
+@property NSMutableArray *history;
+
+- (id)initWithHistory;
+
 - (NSString *)inputForPrompt:(NSString *)promptString;
+
+- (void)addHistory:(NSString *)command;
+
+- (void)printHistory;
 
 @end

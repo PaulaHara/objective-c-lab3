@@ -44,12 +44,41 @@
         printf("Not Found!\n");
     }else{
         Contact *contact = [self.contacts objectAtIndex:contactId];
-        NSLog(@"\nId - %d\nName - %@\nEmail - %@\n", contactId, contact.name, contact.email);
+        [self printContact:contactId name:contact.name email:contact.email];
     }
 }
 
 - (void)searchByWord:(NSString *)searchTerm{
+    Boolean foundSomething = false;
     
+    for (int index = 0; index < [self.contacts count]; index++) {
+        Contact *contact = [self.contacts objectAtIndex:index];
+        if([contact.name containsString:searchTerm] || [contact.email containsString:searchTerm]){
+            [self printContact:index name:contact.name email:contact.email];
+            foundSomething = true;
+        }
+    }
+    
+    if(!foundSomething){
+        printf("Not Found!\n");
+    }
+}
+
+- (void)printContact:(int) index
+                name:(NSString *) name
+               email:(NSString *) email{
+    NSLog(@"\n\nId - %d\nName - %@\nEmail - %@\n", index, name, email);
+}
+
+- (Boolean)emailAlreadyExist:(NSString *) email{
+    for (int index = 0; index < [self.contacts count]; index++) {
+        Contact *contact = [self.contacts objectAtIndex:index];
+        
+        if([contact.email isEqualToString:email]){
+            return true;
+        }
+    }
+    return false;
 }
 
 @end

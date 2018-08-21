@@ -23,4 +23,10 @@
 
 - (void)searchByWord:(NSString *)searchTerm;
 
+- (void)printContact:(int) index
+                name:(NSString *) name
+               email:(NSString *) email;
+
+- (Boolean)emailAlreadyExist:(NSString *) email;
+
 @end
