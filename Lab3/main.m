@@ -18,12 +18,13 @@ void addNewContact(InputCollector *inputCollector, ContactList *contactList);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSString *option = @"";
-        InputCollector *inputCollector = [[InputCollector alloc] initWithHistory];
+        InputCollector *inputCommand = [[InputCollector alloc] initWithHistory];
+        InputCollector *inputCollector = [[InputCollector alloc] init];
         ContactList *contactList = [[ContactList alloc] initWithMutableArray];
         
         while(![option isEqualToString:@"quit"]){
             NSString *menu = @"\n\nWhat would you like to do next?\nnew - Create a new contact\nlist - List all contacts\nshow - Search contact by id and display\nfind <search term> - Search contacts that have the search term in their name or email\nhistory - Print the last 3 commands used\nquit - Exit application\n";
-            option = [inputCollector inputForPrompt:menu];
+            option = [inputCommand inputForCommand:menu];
             
             if([option isEqualToString:@"new"]){
                 addNewContact(inputCollector, contactList);
@@ -45,7 +46,7 @@ int main(int argc, const char * argv[]) {
                     [contactList printAllContacts];
                 }
             }else if([option isEqualToString:@"history"]){
-                [inputCollector printHistory];
+                [inputCommand printHistory];
             }else if([option isEqualToString:@"quit"]){
                 printf("\n\nBye bye (^_^)/\n");
             }else{

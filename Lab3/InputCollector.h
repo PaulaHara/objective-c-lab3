@@ -15,6 +15,8 @@
 
 - (id)initWithHistory;
 
+- (NSString *)inputForCommand:(NSString *)promptString;
+
 - (NSString *)inputForPrompt:(NSString *)promptString;
 
 - (void)addHistory:(NSString *)command;

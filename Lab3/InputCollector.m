@@ -18,7 +18,7 @@
     return self;
 }
 
-- (NSString *)inputForPrompt:(NSString *)promptString{
+- (NSString *)inputForCommand:(NSString *)promptString{
     char input[255];
     
     NSLog(@"%@", promptString);
@@ -28,6 +28,15 @@
     [self addHistory:command];
     
     return command;
+}
+
+- (NSString *)inputForPrompt:(NSString *)promptString{
+    char input[255];
+    
+    NSLog(@"%@", promptString);
+    fgets(input, 255, stdin);
+    
+    return [[[NSString stringWithUTF8String:input] lowercaseString] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 }
 
 - (void)addHistory:(NSString *)command{
